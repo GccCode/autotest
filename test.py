@@ -39,7 +39,7 @@ finally :
         pass
     finally:
         try:
-            time.sleep(random.randint(3, 6))
+            time.sleep(random.randint(3,6))
             browser.execute_script('window.stop()')
             input_box = browser.find_element_by_id('twotabsearchtextbox')
         except Exception as e:
@@ -95,8 +95,8 @@ finally :
                     finally :
                             move_count = 0
                             while move_count < 3:
-                                x = random.randint(0, width / 3)
-                                y = random.randint(0, heigth / 3) + 200
+                                x = random.randint(0, int(width / 3))
+                                y = random.randint(0, int(heigth / 3)) + 200
                                 move_time = random.randint(1, 20) * 1000 / 10000
                                 pyautogui.moveTo(x, y, move_time)
                                 time.sleep(random.randint(2, 4))
